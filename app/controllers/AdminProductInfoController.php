@@ -61,7 +61,6 @@ class AdminProductInfoController
 
 
 	public function destroy($id) {
-
 		if (empty(Products_info::checkDeleteConstrain('products',$id))) {
 			if(Products_info::delete($id)){
 				Session::createSession('msg','Deleted Successfully!');

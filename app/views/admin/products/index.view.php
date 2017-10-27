@@ -196,11 +196,7 @@ require dirname(__DIR__).'/require/header.view.php';
                                             </td>
                                         </tr>
                                         <?php } ?>
-                                               
-                                        <tr>
-                                          <td class="text-center" colspan="8">No data</td>
-                                        </tr>
-                         
+                                        
                                     </tbody>
                                 </table>
                             </div>

@@ -110,12 +110,11 @@ public function index(){
 
 
 public function detail($product_info_id)  {  
-  $color = Products::getColor($product_info_id);
+$color = Products::getColor($product_info_id);
   $size = Products::getSize($product_info_id);
   $productInfo = Products_info::find('id',$product_info_id);
   $gender_men_cats=Category::find('gender',1);
   $gender_women_cats=Category::find('gender',0);
-  
   if (empty($productInfo)) {
     return view('error');
   } else {
