@@ -113,7 +113,7 @@ require dirname(__DIR__).'/require/header.view.php';
                           'fullname'  => '',
                           'paid'      => -1,
                           'shipped'   => -1,
-                          'payment'   => -1,
+                          'payment_id'   => -1,
                           'status'    => -1,
                           'date_order'=> ''
                           );
@@ -189,11 +189,11 @@ require dirname(__DIR__).'/require/header.view.php';
                     <div class="col-sm-1" style="margin-left: 40px">
                      <div class="form-group">
                        <select id="payment" name="payment" class="multiselect" >
-                        <option <?= $search_key['payment'] == -1 ? 'selected="selected"':''?> value="-1">--payment--</option>
+                        <option <?= $search_key['payment_id'] == -1 ? 'selected="selected"':''?> value="-1">--payment--</option>
                         <?php
                         foreach ($payments as $item) {
                           ?>
-                          <option <?php if($search_key['payment']==$item->id) echo 'selected="selected"';?> value="<?php echo $item->id;?>"><?php echo $item->name;?></option>
+                          <option <?php if($search_key['payment_id']==$item->id) echo 'selected="selected"';?> value="<?php echo $item->id;?>"><?php echo $item->name;?></option>
                           <?php
                         }
                         ?>
