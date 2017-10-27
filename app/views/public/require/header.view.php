@@ -99,13 +99,13 @@
                               
                                
                             </a>
-                            <span style="margin-left: 10px;">
+                            
                                 <?php
                                     if(isset($_SESSION['login'])){ 
                                         echo $_SESSION['login']->username;
                                     }
                                 ?>
-                            </span>
+                            
                             <?php 
                                 if(!isset($_SESSION['login'])){ 
                                     echo '<button class="account" id="account"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</button>';
